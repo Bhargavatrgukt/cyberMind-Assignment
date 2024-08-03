@@ -2,11 +2,10 @@ import Job from "../models/job.model.js";
 
 export const createJob = async (req, res) => {
   const { title, description, companyName, location, salaryRange, applicationDeadline } = req.body;
-  const userId = req.user.id; // Ensure `req.user` is populated correctly
+   // Ensure `req.user` is populated correctly
 
   try {
     const newJob = new Job({
-      userId,
       title,
       description,
       companyName,
@@ -22,16 +21,17 @@ export const createJob = async (req, res) => {
 };
 
 export const getAllJobs = async (req, res) => {
-  const userId = req.user.id;
-
+ 
   try {
-    const jobs = await Job.find({ userId });
+    const jobs = await Job.find({ });
     res.status(200).json(jobs);
   } catch (err) {
     res.status(500).json({ message: 'Server error' });
   }
 };
 
+
+/*
 export const updateJob = async (req, res) => {
   const { id } = req.params;
   const { title, description, companyName, location, salaryRange, applicationDeadline } = req.body;
@@ -48,6 +48,8 @@ export const updateJob = async (req, res) => {
   }
 };
 
+
+
 export const deleteJob = async (req, res) => {
   const { id } = req.params;
 
@@ -58,3 +60,5 @@ export const deleteJob = async (req, res) => {
     res.status(500).json({ message: 'Server error' });
   }
 };
+
+*/
