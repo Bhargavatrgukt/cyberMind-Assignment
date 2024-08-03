@@ -1,0 +1,19 @@
+.job-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Add gap for spacing between job cards */
+  }
+  
+  /* Media Queries for Mobile */
+  @media (max-width: 768px) {
+    .job-container {
+      flex-direction: column; /* Stack job cards vertically on smaller screens */
+      align-items: flex-start; /* Align items to the start */
+      justify-content: center; /* Center items horizontally */
+      gap: 10px; /* Reduce gap between job cards */
+    }
+  }
+  

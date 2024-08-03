@@ -1,0 +1,81 @@
+.job-card {
+    width: 316px;
+    height: 360px;
+    gap: 0px;
+    border-radius: 12px 0px 0px 0px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 14px 0px #D3D3D326;
+    padding: 16px; 
+    margin: 70px;
+  }
+  
+  /* Styling for the company logo */
+  .company-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Adjust the size as needed */
+    height: 40px; /* Adjust the size as needed */
+    background: linear-gradient(180deg, #A128FF 0%, #6100AD 113.79%);
+    color: white; /* Text color */
+    border-radius: 50%; /* Make it a circle */
+    font-size: 20px; /* Font size */
+    font-weight: bold; /* Font weight */
+    text-align: center;
+    align-self: center;
+  }
+  
+  .intial-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .deadline {
+    font-size: 25px;
+    font-weight: 600;
+  }
+  
+  h3 {
+    text-align: center;
+  }
+  
+  .submit-btn {
+    display: block; /* Makes the button a block-level element */
+    margin: 0 auto;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: blue;
+    color: aliceblue;
+  }
+  
+  /* Media Queries for Mobile */
+  @media (max-width: 768px) {
+    .job-card {
+      width: 90%; /* Adjust width to fit mobile screens */
+      margin: 20px auto; /* Center horizontally and add top/bottom margin */
+    }
+  
+    .company-logo {
+      width: 30px; /* Smaller logo size for mobile */
+      height: 30px; /* Smaller logo size for mobile */
+      font-size: 16px; /* Smaller font size for mobile */
+    }
+  
+    .intial-flex {
+      flex-direction: column; /* Stack items vertically on small screens */
+      align-items: center; /* Center items horizontally */
+    }
+  
+    .deadline {
+      font-size: 20px; /* Adjust font size for smaller screens */
+    }
+  
+    .submit-btn {
+      width: 120px; /* Adjust button width for mobile */
+      height: 40px; /* Adjust button height for mobile */
+      font-size: 14px; /* Adjust font size for button text */
+    }
+  }
+  
